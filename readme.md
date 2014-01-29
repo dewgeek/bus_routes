@@ -3,7 +3,7 @@ bus-routes
 
 the API folder stores the api that would return a json for every GET request sent in a format.
 
-Ex: A get request to the url: " http://routes1.herokuapp.com/<start>/<end> " will return the bus number(s) that connects start and end. Visiting the url from the browser will give the same result.
+Ex: A get request to the url: " http://routes1.herokuapp.com/start/end " will return the bus number(s) that connects start and end. Visiting the url from the browser will give the same result.
 
 
 	requests.get('http://routes1.herokuapp.com/Ruby Hospital/Howrah')
