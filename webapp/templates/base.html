@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+  		
+  		<title>
+  			kolkata bus routes
+        </title>
+         <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link  href="{{ url_for('static', filename='bootstrap.css') }}"  rel="stylesheet">
+        <link href="{{ url_for('static', filename='bus.css') }}"   rel="stylesheet">
+
+        <script type="text/javascript"> /*
+
+    $(document).ready(function(){
+
+        $("#btn").click(function(){
+                  $.ajax({
+                      type: "POST",
+                      url: "/input",
+                      data: $("#myform").serialize()
+                      })
+        });        
+    })
+
+*/	</script>
+
+    </head>
+    
+    <body>
+    	<div class="container">
+    		<h3>kolkata bus routes</h3>
+
+    		<div class = "content">
+
+    			<div id="centerDiv">
+
+    				{% block content %} {% endblock %}
+
+    			</div>
+    		</div>
+
+    	</div> 			
+			</div>
+
+		</div>
+
+		<script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+		<!--script type="text/javascript" src="{{ url_for('static', filename='dropdown.js') }}"></script-->
+
+    </body>
+
+</html>
