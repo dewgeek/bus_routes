@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="">
+      <meta name="author" content="">
+  		
+  		<title>
+  			kolkata bus routes
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+
+        <!-- Bootstrap core CSS -->
+        <link  href="{{ url_for('static', filename='bootstrap.css') }}"  rel="stylesheet">
+        <link href="{{ url_for('static', filename='navbar.css') }}"   rel="stylesheet">
+
+        <script type="text/javascript">
+
+
+        $(document).ready(function(){
+
+          $(function(){
+            $('input:checkbox').prop('checked', false)
+            $('input:checkbox').click(function(){
+                if($(this).is(':checked')){
+                    $('input:checkbox').not(this).prop('checked', false);        
+                }
+            });
+        })
+          /*
+
+            $("#btn").click(function(){
+                      $.ajax({
+                          type: "POST",
+                          url: "/input",
+                          data: $("#myform").serialize()
+                          })
+            });    */     
+        });
+                                       
+   </script>
+
+    </head>
+    
+    <body>
+    	
+<div class="container">
+
+      <!-- Static navbar -->
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" >Kolkata Bus routes</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/edit">Edit Routes</a></li>
+            
+          </ul>
+          
+        </div><!--/.nav-collapse -->
+      </div>
+      
+      <!-- Main component for a primary marketing message or call to action -->
+
+      <div class="jumbotron">
+        
+
+        <p> 
+
+            {% block content %} {% endblock %}
+
+      </p>
+        
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <script type="text/javascript" src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+    <!--script type="text/javascript" src="{{ url_for('static', filename='dropdown.js') }}"></script-->
+    
+    </body>
+
+</html>
