@@ -42,10 +42,22 @@ audio:not([controls]) {
 
 }
 
+.page-content{
+  width: 620px;
+}
+
+#status{
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: rgb(200, 173, 216);
+  width: 400px;
+
+}
+
 .container h3{
   border-bottom: 5px;
   text-align: center;
-  font-family:"Impact";
+  font-family: Impact;
 }
 .container {
   padding-right: 15px;
@@ -547,7 +559,7 @@ p {
 
 @media (min-width: 768px) {
   .lead {
-    font-size: 21px;
+    font-size: 18px;
   }
 }
 
@@ -617,7 +629,9 @@ cite {
 }
 
 .page-header {
-  padding-bottom: 9px;
+  padding-bottom: 25px;
+  padding-left: 20px;
+  padding-top: 1px;
   margin: 40px 0 20px;
   border-bottom: 1px solid #eeeeee;
 }
@@ -5290,16 +5304,16 @@ a.list-group-item.active > .badge,
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 48px;
+    padding-top: 5px;
     padding-bottom: 48px;
   }
   .container .jumbotron {
-    padding-right: 260px;
-    padding-left: 260px;
+    padding-right: 220px;
+    padding-left: 220px;
   }
   .jumbotron h1,
   .jumbotron .h1 {
-    font-size: 63px;
+    font-size: 20px;
   }
 }
 

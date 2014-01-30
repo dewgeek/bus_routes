@@ -4,6 +4,14 @@
 
 <h4 id = "edit-header"> Edit Routes </h4>
 
+<div id = "status">
+
+	{% if status == '200' %}
+		<p>your entry was posted successfully Thanks for your contribution.</p>
+
+	{% endif %}
+</div>
+
 
 <form  action="/edit" method="POST" id='myform'>
 
