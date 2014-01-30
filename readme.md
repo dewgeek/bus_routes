@@ -21,5 +21,7 @@ specification
 
 * I have used Flask(API) , [Mongodb](http://www.mongodb.org/) {database}. It is hosted on [Mongolab](https://mongolab.com/welcome/). The basic version gave me enough freedom to use it for my database.
 
+* The database still does not have all entries yet, working on it :) 
+
 
 
