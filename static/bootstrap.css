@@ -73,7 +73,14 @@ audio:not([controls]) {
   padding-left: 90px;
 }
 
-
+.ui-autocomplete{
+  width: 220px;
+  position: relative;
+  top: -195.367px;
+  left: 348.5px;
+  font-family: Verdana,Arial,sans-serif;
+font-size: 1em;
+}
 
 
 
@@ -5304,7 +5311,7 @@ a.list-group-item.active > .badge,
 
 @media screen and (min-width: 768px) {
   .jumbotron {
-    padding-top: 5px;
+    padding-top: 35px;
     padding-bottom: 48px;
   }
   .container .jumbotron {

@@ -5,34 +5,49 @@ import requests
 from flask import Flask, jsonify, request, render_template, json
 app = Flask(__name__, static_folder='static', template_folder= 'templates')
 
-app.secret_key= 'secret_key'
+app.secret_key= '\xbf\xb50\x94au\x8f\xf9\se2\x1f\x93\x06(\xdf\xe4\xaf\x1f\x86k\xb3\x2fQ%1'
 
 
 @app.route('/home')
 def home():
+	
+	return render_template('home.html' )
+
+
+@app.route('/search', methods=['GET'] )
+def search():
+	
+
+	word = request.args.get('term')
+	word = str(word)
 
 	data = requests.get('http://routes1.herokuapp.com/')
 
 	binary = data.content
 	output = json.loads(binary)
 
-	from_list = []
-	to_list = []
+	result = []
 	
 	for i in output['start']:
-		from_list.append(i)
+		#from_list.append(i)
+		
+		match = re.search(r'^'+word+'[\w\s.]+', i , re.IGNORECASE)
+		if match:
+		    result.append(match.group()) 
 
-	for j in output['end']:
-		to_list.append(j)
+	#for j in result:
+		#print j
 
-	return render_template('home.html', from_data = from_list, to_data = to_list )
+
+	return json.dumps(result)
+
 
 
 @app.route('/input', methods=('GET' ,'POST') )
 def sorted():
 	if request.method=='POST':
-		start = request.form['from']
-		end = request.form['to']
+		start = request.form['start']
+		end = request.form['end']
 
 		url = 'http://routes1.herokuapp.com/%s/%s' %(start,end)
 		data = requests.get(url)

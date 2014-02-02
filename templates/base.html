@@ -15,10 +15,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename='jquery-ui-1.10.4.js') }}"></script>
 
         <!-- Bootstrap core CSS -->
         <link  href="{{ url_for('static', filename='bootstrap.css') }}"  rel="stylesheet">
         <link href="{{ url_for('static', filename='navbar.css') }}"   rel="stylesheet">
+        <link href="{{ url_for('static', filename='jquery-ui-1.10.4.custom.css') }}"   rel="stylesheet">
+
+         
 
         <script type="text/javascript">
 
@@ -33,6 +37,36 @@
                 }
             });
         })
+
+
+          $('#start').autocomplete({
+            source: '/search',
+            minLength: 3,
+             select: function( event, ui ) {              
+            }
+          })
+
+          $('#end').autocomplete({
+            source: '/search',
+            minLength: 3,
+             select: function( event, ui ) {              
+            }
+          })
+             
+            
+        
+
+ /* $( "#birds" ).autocomplete({
+source: "search.php",
+minLength: 2,
+select: function( event, ui ) {
+log( ui.item ?
+"Selected: " + ui.item.value + " aka " + ui.item.id :
+"Nothing selected, input was " + this.value );
+}
+
+
+
           /*
 
             $("#btn").click(function(){
