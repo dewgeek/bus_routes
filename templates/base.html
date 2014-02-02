@@ -52,22 +52,7 @@
              select: function( event, ui ) {              
             }
           })
-             
-            
-        
-
- /* $( "#birds" ).autocomplete({
-source: "search.php",
-minLength: 2,
-select: function( event, ui ) {
-log( ui.item ?
-"Selected: " + ui.item.value + " aka " + ui.item.id :
-"Nothing selected, input was " + this.value );
-}
-
-
-
-          /*
+       /*
 
             $("#btn").click(function(){
                       $.ajax({
@@ -100,7 +85,7 @@ log( ui.item ?
 
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="/home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/edit">Edit Routes</a></li>
             <li><a href="/rules">Instructions</a></li>
             
@@ -112,10 +97,8 @@ log( ui.item ?
       <!-- Main component for a primary marketing message or call to action -->
 
       <div class="jumbotron">
-        
 
         <p> 
-
             {% block content %} {% endblock %}
 
             {% block content_rules %} {% endblock %}
